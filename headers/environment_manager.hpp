@@ -7,6 +7,12 @@
  * It allows retrieving, setting, and unsetting environment variables.
  */
 
+#pragma once
+
+#include <mutex>
+#include <map>
+#include <string>
+
 namespace tangue
 {
     /**
