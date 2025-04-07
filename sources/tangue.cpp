@@ -1,6 +1,10 @@
-#include "tangue.hpp"
+#include <iostream>
 
-tangue::Tangue::Tangue(const int argc, const char const *argv[], const char const *envp[])
+#include "tangue.hpp"
+#include "environment_manager.hpp"
+#include "argument_manager.hpp"
+
+tangue::Tangue::Tangue(void)
 {
 }
 
