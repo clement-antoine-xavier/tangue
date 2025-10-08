@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "dashboard.h": "c",
+        "window.h": "c",
+        "stdlib.h": "c",
+        "server.h": "c",
+        "stdio.h": "c",
+        "gauge.h": "c",
+        "math.h": "c"
+    }
+}
