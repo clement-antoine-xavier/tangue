@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 
 project(tangue
     VERSION 1.0.0
-    DESCRIPTION "Tangue"
+    DESCRIPTION "Tangue is a modern, fast (high-performance), web framework for building APIs with C++."
     HOMEPAGE_URL "https://clement-antoine-xavier.github.io/tangue"
     LANGUAGES CXX)
 
