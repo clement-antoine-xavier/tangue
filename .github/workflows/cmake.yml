@@ -42,7 +42,8 @@ jobs:
             c_compiler: cl
 
     steps:
-    - uses: actions/checkout@v5.0.0
+      - name: Checkout
+        uses: actions/checkout@v5.0.0
 
     - name: Configure CMake
       run: >
