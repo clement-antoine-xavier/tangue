@@ -6,6 +6,8 @@ FetchContent_Declare(
     GIT_TAG v1.17.0
 )
 
+set(gtest_force_shared_crt ON CACHE BOOL "Use shared CRT for googletest" FORCE)
+
 FetchContent_MakeAvailable(googletest)
 
 set(TESTS_HEADERS_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/headers)
