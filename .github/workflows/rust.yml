@@ -26,5 +26,15 @@ jobs:
       - name: Build ${{ matrix.target }}
         run: cargo build --target ${{ matrix.target }} --verbose
 
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6.0.1
+
+      - name: Fetch dependencies
+        run: cargo fetch --locked
+
       - name: Run tests
-        run: cargo test --lib --target ${{ matrix.target }} --verbose
+        run: cargo test --lib --verbose
