@@ -15,19 +15,16 @@ jobs:
     strategy:
       matrix:
         target: [aarch64-unknown-uefi, i686-unknown-uefi, x86_64-unknown-uefi]
-        mode: [debug, release]
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6.0.1
 
-      - name: Build ${{ matrix.target }} (${{ matrix.mode }})
-        run: |
-          if [ "${{ matrix.mode }}" = "release" ]; then
-            cargo build --target ${{ matrix.target }} --release --verbose
-          else
-            cargo build --target ${{ matrix.target }} --verbose
-          fi
+      - name: Fetch dependencies
+        run: cargo fetch --locked
+
+      - name: Build ${{ matrix.target }}
+        run: cargo build --target ${{ matrix.target }} --verbose
 
       - name: Run tests
-        run: cargo test --verbose
+        run: cargo test --target ${{ matrix.target }} --verbose
